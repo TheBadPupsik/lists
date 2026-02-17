@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { GalleryShow } from './components/Gallery/Gallery';
+import { UserRows } from './components/UserRows/UserRows';
 
 // const nav = [
 //   { id: 1, label: "Главная" },
@@ -15,10 +16,15 @@ const data = [
   { id: 4, name: "Alexsander", age: 17, city: "Odessa" }
 ]
 
+function formatAge(age) {
+  return age + "лет";
+}
+
 function App() {
   return (
     <div className="App">
       <GalleryShow></GalleryShow>
+      <UserRows data = {data} formatAge = {formatAge}></UserRows>
     </div>
   );
 }
